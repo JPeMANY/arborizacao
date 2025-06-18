@@ -1,0 +1,17 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+    .legenda {
+        font-size: 0.8rem;
+        color: var(--cinza3);
+        margin-top: 1rem;
+    }
+
+    .caixa .informacoes {
+        display: flex;
+        flex-direction: column;
+    }
