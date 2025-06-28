@@ -16,5 +16,5 @@ document.getElementById('btnEnviar').addEventListener('click', function(event) {
     localStorage.setItem('cpf', cpf);
 
     // Redireciona para a página /inicio.html
-    window.location.href = '/inicio.html';
+    window.location.href = 'arborizacao/inicio.html';
 });
