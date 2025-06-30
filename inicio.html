@@ -9,39 +9,54 @@
     <title>Arborização</title>
 </head>
 <body>
-    <header></header>
-    <main>
-        <div class="caixa">
-            <div class="imgAvatar">
-                <img src="" alt="">
-            </div>
+    <header>
+        <div class="cabecalho"></div>
+
+        <div class="nome">
+            <div class="imgAvatar"><i class="fi fi-rr-circle-user"></i></div>
             <div class="informacoes">
                 <h1 id="nome">João Lima</h1>
                 <span id="cpf">053.979.366-00</span>
-                <a href="#secao_dados_iptu">Dados do IPTU</a>
-                <a href="#secao_propriedades"><i class="fi fi-rr-home"></i>Minhas propriedades</a>
             </div>
         </div>
+    </header>
 
-        <span class="legenda" id="secao_dados_iptu">Dados do IPTU</span>
-        <div class="caixa">
-            <span><span id="numero_propriedades"></span> propriedades</span>
-            <span><span id="valor_imoveis"></span> valor total dos imóveis</span>
+    <main>
+        <div class="caixa dados_iptu">
+            <h1 id="secao_dados_iptu"><i class="fi fi-rr-coins"></i>Dados do IPTU</h1>
+
+            <span><span id="numero_propriedades">3</span> propriedades</span>
+            <span><span id="valor_imoveis">R$1450,00</span> valor total dos imóveis</span>
             <hr>
-            <span><span id=""></span> valor do IPTU</span>
-            <span><span id=""></span> de desconto por </span>
+            <span><span id="">R$150,00</span> valor do IPTU</span>
+            <span><span id="">R$45,00</span> de desconto por </span>
             <span><span id=""></span></span>
         </div>
 
-        <span class="legenda" id="secao_propriedades">Minhas propriedades</span>
+
         <div id="propriedades">
             <a class="caixa">
-                <div class="informacoes">
-                    <span>Paverama</span>
-                    <h2>Minha casa</h2>
-                    <h3>Rua 4 de julho, 287</h3>
+                <h1><i class="fi fi-rr-home"></i>Minhas propriedades</h1>
+                <div class="titulo">
+                    <div class="imagem">
+                        <img src="assets/casa_1.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span><i class="fi fi-rr-home"></i>Paverama</span>
+                        <h2>Minha casa</h2>
+                        <h3>Rua 4 de julho, 287</h3>
+                    </div>
+
                 </div>
-                <div class="imagem"></div>
+                <div class="informacoes">
+                    <h4>R$35,00</h4>
+                    <span>Desconto por arborização</span>
+                    <h4>R$145,00</h4>
+                    <span>Custo IPTU (com desconto)</span>
+                </div>
+                <div class="link">
+                    <i class="fi fi-rr-angle-right"></i>
+                </div>
             </a>
 
         </div>

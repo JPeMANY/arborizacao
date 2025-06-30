@@ -3,9 +3,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #5E6175;
+    background-image: url(assets/arvores_back.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: grayscale(1);
     height: 100vh;
     color: white;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5e6175a1;
+    z-index: -1;
 }
 
 h1 {
@@ -38,7 +52,9 @@ form {
         margin-top: 4rem;
         height: 3rem;
         border: none;
-        background-color: white;
+        background-color: var(--verde);
+        color: white;
+        border: 1px solid white;
         border-radius: 1.5rem;
         width: 60%;
     }
