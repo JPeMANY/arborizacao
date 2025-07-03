@@ -13,3 +13,5 @@ function atualizarPagina(dados) {
 
     nome.textContent = dados[0].nome;
 }
+
+const existemDados = localStorage.getItem('dadosSalvos')
