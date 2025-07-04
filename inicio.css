@@ -169,6 +169,20 @@ h2 {
             margin: 0;
         }
 
+.adcionarNovaPropriedade {
+    background-color: #e7ebf0;
+    color: #366fac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #739dcb;
+    cursor: pointer;
+}
+
+.adcionarNovaPropriedade:hover {
+    background-color: #d7e0e9;
+}
+
 footer {
     background-color: var(--cinza4);
     color: white;
@@ -188,6 +202,43 @@ footer {
 
 .hover_scale:hover {
     transform: scale(1.02);
+}
+
+
+/* POPUP */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+    .popup .mensagem {
+        height: 300px;
+        width: 400px;
+        border-radius: 10px;
+        background-color: white;
+        z-index: 1;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+#popup_adicionar_propriedade {
+    display: flex;
+}
+
+#popup_adicionar_propriedade::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    background-color: #383a3e1f;
+    z-index: -1;
 }
 
 

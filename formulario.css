@@ -57,6 +57,7 @@ form {
         border: 1px solid white;
         border-radius: 1.5rem;
         width: 60%;
+        cursor: pointer;
     }
 
 @media (min-width: 1025px) {

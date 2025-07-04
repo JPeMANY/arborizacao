@@ -1,17 +1,10 @@
-const jsonUrl = 'dados/usuarios.json?' + new Date().getTime();
-fetch(jsonUrl)
-    .then(response => response.json()) // Converter a resposta para JSON
-    .then(data => {
-        const dados = data;
-        atualizarPagina(dados);
-    })
-.catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+const h1Nome = document.querySelector('#nome');
+const spanCpf = document.querySelector('#cpf');
 
-function atualizarPagina(dados) {
-    const nome = document.querySelector('#nome');
-    const cpf = document.querySelector('#cpf');
+const nome = localStorage.getItem('nome');
+const cpf = localStorage.getItem('cpf');
 
-    nome.textContent = dados[0].nome;
-}
+h1Nome.textContent = nome;
+spanCpf.textContent = cpf;
 
-const existemDados = localStorage.getItem('dadosSalvos')
+const botaoNovaPropriedade = document.querySelector('.adcionarNovaPropriedade');
