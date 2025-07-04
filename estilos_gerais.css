@@ -24,3 +24,6 @@ body {
     padding: 1rem;
 }
 
+.none {
+    display: none !important;
+}

@@ -39,6 +39,16 @@
         <h2><i class="fi fi-rr-home"></i>Minhas propriedades</h2>
         <div id="propriedades">
             <div class="caixa hover_scale">
+                <div class="opcoes">
+                    <div class="status">
+                        <i class="fi fi-rr-info"></i>
+                        <span>Aguardando confirmação</span>
+                    </div>
+                    <div class="icones_opcoes">
+                        <div class="excluir"><i class="fi fi-rr-trash"></i></div>
+                        <div class="editar"><i class="fi fi-rr-pencil"></i></div>
+                    </div>
+                </div>
                 <div class="titulo">
                     <div class="imagem">
                         <img src="assets/casa_1.jpg" alt="">
@@ -69,6 +79,16 @@
             </div>
 
             <div class="caixa hover_scale">
+                <div class="opcoes">
+                    <div class="status">
+                        <i class="fi fi-rr-info"></i>
+                        <span>Aguardando confirmação</span>
+                    </div>
+                    <div class="icones_opcoes">
+                        <div class="excluir"><i class="fi fi-rr-trash"></i></div>
+                        <div class="editar"><i class="fi fi-rr-pencil"></i></div>
+                    </div>
+                </div>
                 <div class="titulo">
                     <div class="imagem">
                         <img src="assets/casa_2.jpg" alt="">
@@ -99,6 +119,16 @@
             </div>
 
             <div class="caixa hover_scale">
+                <div class="opcoes">
+                    <div class="status">
+                        <i class="fi fi-rr-info"></i>
+                        <span>Aguardando confirmação</span>
+                    </div>
+                    <div class="icones_opcoes">
+                        <div class="excluir"><i class="fi fi-rr-trash"></i></div>
+                        <div class="editar"><i class="fi fi-rr-pencil"></i></div>
+                    </div>
+                </div>
                 <div class="titulo">
                     <div class="imagem">
                         <img src="assets/casa_3.jpg" alt="">
@@ -139,14 +169,34 @@
         </div>
     </main>
 
-    <div class="popup" id="popup_adicionar_propriedade">
-        <div class="mensagem">
-        <h3>Adicionar propriedade</h3>
-        <input type="text" name="" id="">
-        <input type="text">
-        <input type="text">
-        <button>Atualizar</button>
-        </div>
+    <div class="popup none" id="popup_adicionar_propriedade">
+        <form class="mensagem">
+            <h3>Adicionar propriedade</h3>
+            
+            <label for="nome_propriedade">Nome da propriedade:</label>
+            <input type="text" name="nome_propriedade" id="nome_propriedade" placeholder="Minha casa" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" placeholder="Porto Alegre" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" placeholder="Rua Duque de Caxias, 228" required>
+
+            <label for="valor_propriedade">Valor da propriedade:</label>
+            <input type="text" name="valor_propriedade" id="valor_propriedade" placeholder="R$ 700,00" required>
+
+            <label for="">Números de árvores plantadas:</label>
+            <input type="number" name="arvores_plantadas" id="arvores_plantadas" placeholder="Árvores plantadas">
+
+            <label for="">Área verde:</label>
+            <input type="number" name="arvores_plantadas" id="arvores_plantadas" placeholder="30m²">
+
+            <!-- input selecionar imagem -->
+
+            <button type="submit">Atualizar</button>
+
+            <div class="icon_fechar_popup"><i class="fi fi-rr-circle-xmark"></i></div>
+        </form>
     </div>
 
     <footer>

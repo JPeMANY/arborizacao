@@ -90,6 +90,47 @@ h2 {
     gap: 1.5rem;
 }
 
+    #propriedades .opcoes {
+        display: flex;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--cinza2);
+    }
+
+        #propriedades .status {
+            color: #366fac;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+        }
+
+            #propriedades .status i {
+                font-size: 0.9rem;
+                line-height: 0.9rem;
+                margin-top: 0.1rem;
+            }
+
+        #propriedades .icones_opcoes {
+            margin-left: auto;
+            color: var(--cinza3);
+            display: flex;
+            gap: 0.6rem;
+        }
+
+            #propriedades .icones_opcoes div {
+                height: 1.6rem;
+                width: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+                #propriedades .icones_opcoes i {
+                    font-size: 1rem;
+                    line-height: 1rem;
+                }
+
     #propriedades .titulo {
         display: flex;
         gap: 1rem;
@@ -218,14 +259,11 @@ footer {
 }
 
     .popup .mensagem {
-        height: 300px;
-        width: 400px;
         border-radius: 10px;
         background-color: white;
         z-index: 1;
-        box-sizing: border-box;
-        padding: 1rem;
     }
+
 
 #popup_adicionar_propriedade {
     display: flex;
@@ -240,6 +278,45 @@ footer {
     background-color: #383a3e1f;
     z-index: -1;
 }
+
+    #popup_adicionar_propriedade .mensagem {
+        position: relative;
+        box-sizing: border-box;
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #popup_adicionar_propriedade .mensagem h3 {
+        margin: 0 0 1rem 0;
+    }
+
+    #popup_adicionar_propriedade .mensagem input {
+        padding: 0.5rem;
+        box-sizing: border-box;
+        border: 1px solid #d3d3d3;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    #popup_adicionar_propriedade .mensagem button {
+        background-color: var(--verde);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 0.5rem;
+    }
+
+    .icon_fechar_popup {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        font-size: 1.3rem;
+        color: var(--cinza3);
+        cursor: pointer;
+    }
 
 
 @media (min-width: 1025px) {
