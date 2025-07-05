@@ -205,19 +205,7 @@ h2 {
             margin: 0;
         }
 
-.adcionarNovaPropriedade {
-    background-color: #e7ebf0;
-    color: #366fac;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #739dcb;
-    cursor: pointer;
-}
 
-.adcionarNovaPropriedade:hover {
-    background-color: #d7e0e9;
-}
 
 
 /* -------- Estilos animados -------- */
