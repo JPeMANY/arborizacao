@@ -1,2 +1,0 @@
-# arborizacao
-Projeto de ciências

@@ -7,8 +7,8 @@ main {
 .caixa {
     display: flex;
     flex-direction: column;
-    background-color: var(--cinza1);
-    border: 1px solid var(--cinza2);
+    background-color: var(--verde2);
+    border: 1px solid var(--verde3);
     border-radius: 8px;
     padding: 2rem;
     align-items: center;

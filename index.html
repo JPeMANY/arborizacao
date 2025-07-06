@@ -3,27 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="estilos_gerais.css">
-    <link type="text/css" rel="stylesheet" href="formulario.css">
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" type="text/css" href="estilos_gerais.css">
+    <link rel="stylesheet" type="text/css" href="estilos/barra_inferior.css">
+    
+    <link rel="stylesheet" type="text/css" href="inicio.css">
+
+
     <title>Arborização</title>
 </head>
 <body>
-    <h1>Bem-vindo</h1>
+    <header class="cabecalho">
+        <div class="nome">
+            <div class="imgAvatar"><i class="fi fi-rr-circle-user"></i></div>
+            <h1 id="nome">João Lima</h1>
+        </div>
+        <div class="xp">125xp</div>
+    </header>
 
-    <form action="">
-        <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" placeholder="Nome completo">
+    <main>
+        <div class="caixa">
+            <i class="fi fi-rr-tree-deciduous"></i>
+            <h3>4</h3>
+            <span>Árvores plantadas</span>
+        </div>
 
-        <label for="cpf">CPF</label>
-        <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" oninput="formatarCPF(this)" maxlength="14">
+        <div class="caixa">
+            <i class="fi fi-rr-trophy"></i>
+            <h3>#2</h3>
+            <span>posição</span>
+        </div>
 
+        <!-- <h2 id="secao_dados_iptu"><i class="fi fi-rr-coins"></i>Dados do IPTU</h2>
+        <div class="caixa dados_iptu hover_scale">
+            <div>
+                <span><span id="numero_propriedades">3</span> propriedades</span>
+                <span><span id="valor_imoveis">R$1450,00</span> valor total dos imóveis</span>
+            </div>
+            <hr>
+            <div>
+                <span><span id="">R$150,00</span> valor do IPTU</span>
+                <span><span id="">R$45,00</span> de desconto por </span>
+                <span><span id=""></span></span>
+            </div>
+        </div> -->
 
-        <label for="senha">Senha</label>
-        <input id="senha" name="senha" type="password" placeholder="Senha">
+        <h2><i class="fi fi-rr-task-checklist"></i></i>Tarefas</h2>
+        <div class="cartao">
+            <div></div>
+        </div>
 
-        <button class="botao" id="btnEnviar">Entrar</button>
-    </form>
+    </main>
 
-    <script src="formulario.js"></script>
+    <!-- <div class="popup none" id="popup_adicionar_propriedade">
+        <form class="mensagem">
+            <h3>Adicionar propriedade</h3>
+            
+            <label for="nome_propriedade">Nome da propriedade:</label>
+            <input type="text" name="nome_propriedade" id="nome_propriedade" placeholder="Minha casa" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" placeholder="Porto Alegre" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" placeholder="Rua Duque de Caxias, 228" required>
+
+            <label for="valor_propriedade">Valor da propriedade:</label>
+            <input type="text" name="valor_propriedade" id="valor_propriedade" placeholder="R$ 700,00" required>
+
+            <label for="">Números de árvores plantadas:</label>
+            <input type="number" name="arvores_plantadas" id="arvores_plantadas" placeholder="Árvores plantadas">
+
+            <label for="">Área verde:</label>
+            <input type="number" name="arvores_plantadas" id="arvores_plantadas" placeholder="30m²">
+
+            <button type="submit">Atualizar</button>
+
+            <div class="icon_fechar_popup"><i class="fi fi-rr-circle-xmark"></i></div>
+        </form>
+    </div> -->
+
+    <footer>
+        <a href="index.html" class="selecionado">
+            <i class="fi fi-rr-home"></i>
+        </a>
+
+        <a href="ranking.html">
+            <i class="fi fi-rr-trophy"></i>
+        </a>
+
+        <a href="minhas_arvores.html">
+            <i class="fi fi-rr-tree-deciduous"></i>
+        </a>
+
+        <a href="perfil.html">
+            <i class="fi fi-rr-circle-user"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

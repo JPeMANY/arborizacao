@@ -2,6 +2,8 @@
 
 :root {
     --verde: #12cd72;
+    --verde2: #bbe6d1;
+    --verde3: #6db492;
     --cinza1: #fafafa;
     --cinza2: #eaeaea;
     --cinza3: #a8a9b1;
@@ -16,6 +18,36 @@ body {
     margin: 0;
 }
 
+header {
+    width: 100%;
+    background-color: var(--verde);
+    color: white;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .nome .imgAvatar {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .nome h1 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+.xp {
+    margin-left: auto;
+}
+
 main {
     background-color: white;
     margin-top: -1rem;
@@ -27,4 +59,10 @@ main {
 
 .none {
     display: none !important;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
