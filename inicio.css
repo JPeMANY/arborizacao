@@ -27,6 +27,29 @@ h2 {
     padding: 1rem;
 }
 
+/* ----------------------- NOVO */
+.tarefa {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+    .tarefa .checkbox {
+        border: 1px solid var(--cinza3);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .tarefa .cartao {
+        width: 100%;
+        height: 3rem;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid var(--cinza3);
+    }
+
 
 /* -------- Dados gerais sobre o IPTU -------- */
 .caixa.dados_iptu {
