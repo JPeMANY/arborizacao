@@ -18,6 +18,7 @@ body {
     margin: 0;
 }
 
+/* Cabeçalho */
 header {
     width: 100%;
     background-color: var(--verde);
@@ -28,26 +29,28 @@ header {
     padding: 1rem 1rem 2rem 1rem;
 }
 
-.nome {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    .nome .imgAvatar {
-        font-size: 2rem;
-        margin-right: 1rem;
+    .nome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .nome h1 {
-        margin: 0;
-        font-size: 1.1rem;
+        .nome .imgAvatar {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        .nome h1 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+    #xp {
+        margin-left: auto;
     }
 
-#xp {
-    margin-left: auto;
-}
 
+/* Conteúdo */
 main {
     background-color: white;
     margin-top: -1rem;
@@ -61,6 +64,7 @@ main {
     height: 5rem;
 }
 
+/* Estilos globais */
 .none {
     display: none !important;
 }
@@ -72,6 +76,36 @@ i {
 }
 
 
+/* Barra inferior */
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    border-top: 1px solid var(--cinza3);
+}
+
+footer a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cinza3);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+    footer a.selecionado {
+        color: black;
+        font-size: 1.3rem;
+    }
+
+
+/* Versão computador */
 @media (min-width: 1025px) {
     main {
         padding: 1rem 25%;
