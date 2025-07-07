@@ -17,22 +17,23 @@
     <header class="cabecalho">
         <div class="nome">
             <div class="imgAvatar"><i class="fi fi-rr-circle-user"></i></div>
-            <h1 id="nome_usuario">João Lima</h1>
+            <h1 id="nomeUsuario">João Lima</h1>
         </div>
-        <div id="xp">125xp</div>
+        <div id="xp"><span class="numero">0</span>xp</div>
     </header>
 
     <main>
-        <div class="caixa">
-            <i class="fi fi-rr-tree-deciduous"></i>
-            <h3>4</h3>
-            <span>Árvores plantadas</span>
-        </div>
+        <h2><i class="fi fi-rr-tree-deciduous"></i></i>Acesos rápido</h2>
+        <div class="acessoRapido">
+            <a class="caixa" href="minhas_arvores.html">
+                <h3><i class="fi fi-rr-tree"></i>4</h3>
+                <span>Árvores plantadas</span>
+            </a>
 
-        <div class="caixa">
-            <i class="fi fi-rr-trophy"></i>
-            <h3>#2</h3>
-            <span>posição</span>
+            <a class="caixa" href="ranking.html">
+                <h3><i class="fi fi-rr-trophy"></i>#2</h3>
+                <span>posição</span>
+            </a>
         </div>
 
         <!-- <h2 id="secao_dados_iptu"><i class="fi fi-rr-coins"></i>Dados do IPTU</h2>
@@ -50,25 +51,18 @@
         </div> -->
 
         <h2><i class="fi fi-rr-task-checklist"></i></i>Tarefas</h2>
-        <div class="tarefa">
-            <div class="checkbox"></div>
-            <div class="cartao">
-                <span class="icon">♻️</span>
-                <span>Separar o lixo</span>
-            </div>
-        </div>
+        <div class="tarefas"></div>
 
+        <div class="espacoFinal"></div>
     </main>
 
+    <!-- Popup Login -->
     <div class="popup none" id="popup_login">
         <form class="mensagem">
             <h3>Adicionar propriedade</h3>
 
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" placeholder="Nome" required>
-
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite a senha" required>
             
             <label for="cidade">Cidade:</label>
             <input type="text" name="cidade" id="cidade" placeholder="Porto Alegre" required>
@@ -100,6 +94,6 @@
         </a>
     </footer>
 
-    <script src="inicio.js"></script>
+    <script src="inicio.js" defer></script>
 </body>
 </html>

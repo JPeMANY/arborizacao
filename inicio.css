@@ -20,15 +20,43 @@ h2 {
 
 .caixa {
     display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-bottom: 1.5rem;
     background-color: var(--cinza1);
     border: 1px solid var(--cinza2);
     border-radius: 8px;
     padding: 1rem;
-    width: 50%;
 }
 
+    .caixa h3 {
+        margin: 0;
+        display: inline;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .caixa span {
+        font-size: 0.9rem;
+    }
+
 /* ----------------------- NOVO */
+.acessoRapido {
+    display: flex;
+    gap: 1rem;
+}
+
+.tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
 .tarefa {
     display: flex;
     align-items: center;
@@ -41,14 +69,17 @@ h2 {
         height: 1.5rem;
         background-color: #fff;
         border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
     }
 
     .tarefa .cartao {
-        width: 100%;
-        height: 3rem;
+        flex: 1;
         background-color: #fff;
         border-radius: 10px;
-        border: 1px solid var(--cinza3);
+        border: 1px solid var(--cinza2);
         display: flex;
         align-items: center;
         box-sizing: border-box;
@@ -60,9 +91,40 @@ h2 {
             font-size: 1.1rem;
         }
 
+        .tarefa .xp {
+            color: var(--cinza3);
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+
+/* .tarefa.concluida {
+    order: 1;
+} */
+
+    .tarefa.concluida .checkbox {
+        border-color: var(--cinza2);
+        background-color: var(--cinza2);
+        color: var(--cinza3);
+        font-size: 0.7rem;
+    }
+
+    .tarefa.concluida .cartao {
+        background-color: var(--cinza2);
+    }
+
+    .tarefa.concluida span {
+        color: var(--cinza3);
+        /* font-style: italic; */
+        text-decoration: line-through;
+    }
+
+    .tarefa.concluida .icon {
+        opacity: 0.5;
+    }
+
 
 /* -------- Dados gerais sobre o IPTU -------- */
-.caixa.dados_iptu {
+/* .caixa.dados_iptu {
     flex-direction: column;
     gap: 0.5rem;
 }
@@ -81,11 +143,11 @@ h2 {
     .caixa.dados_iptu hr {
         border-top: 1px solid var(--cinza2);
         width: 100%;
-    }
+    } */
 
 
 /* -------- Minhas propriedades -------- */
-#propriedades .caixa {
+/* #propriedades .caixa {
     flex-direction: column;
     gap: 1.5rem;
 }
@@ -208,7 +270,7 @@ h2 {
             font-size: 1.7rem;
             font-weight: normal;
             margin: 0;
-        }
+        } */
 
 
 
@@ -297,16 +359,9 @@ h2 {
     }
 
 
-@media (min-width: 1025px) {
-    body {
-        font-size: 14px;
-    }
+/* Estilos PC ocultos */
 
-    main {
-        padding: 1rem 20%;
-    }
-
-    .caixa.dados_iptu {
+    /* .caixa.dados_iptu {
         flex-direction: row;
         gap: 1.5rem;
     }
@@ -341,5 +396,4 @@ h2 {
 
     #propriedades .caixa h3 {
         font-size: 0.9rem;
-    }
-}
+    } */

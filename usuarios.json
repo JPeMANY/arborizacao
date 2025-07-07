@@ -1,13 +1,7 @@
 [
     {
+        "icon": 1,
         "nome": "João Lima",
-        "cpf": "053.204.459-76",
-        "propriedades": [
-            {
-                "nome": "Minha casa",
-                "endereco": "Rua 4 de julho, 287",
-                "valor_iptu": ""
-            }
-        ]
+        "xp": 15
     }
 ]
