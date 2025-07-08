@@ -38,3 +38,40 @@ main {
 .adicionar_arvore:hover {
     background-color: #d7e0e9;
 }
+
+
+/* Popup */
+
+  .arvore-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .opcao-arvore {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+
+  .opcao-arvore img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .opcao-arvore input[type="radio"] {
+    display: none;
+  }
+
+  .opcao-arvore.selecionado {
+    border-color: #4CAF50;
+    background-color: #eafaf0;
+  }

@@ -1,8 +1,8 @@
-const valorPropriedade = 1200;
-const iptu = 40;
+const valorPropriedade = 300000;
+const iptu = 3000;
 
 const arvoresPlantadas = 0 | Number(localStorage.getItem('arvoresPlantadas')); 
-const descontoPorArvore = 3;
+const descontoPorArvore = 75;
 const iptuComDesconto = iptu - (arvoresPlantadas * descontoPorArvore);
 
 // Atualizar dados

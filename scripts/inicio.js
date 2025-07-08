@@ -133,7 +133,7 @@ function criarTarefa(tarefa) {
 }
 
 // Função para adicionar as tarefas na página
-function adicionarTarefas() {
+// function adicionarTarefas() {
     const tarefasContainer = document.querySelector('.tarefas'); // Seleciona a div com class 'tarefas'
 
     tarefasLista.forEach(tarefa => {
@@ -154,8 +154,49 @@ function adicionarTarefas() {
             localStorage.setItem('xp', xpSpan.textContent);
         })
     })
-}
+
+// const tarefas = document.querySelectorAll('.tarefa');
+
+// // Recupera tarefas concluídas do localStorage ou inicia como array vazio
+// let tarefasConcluidas = JSON.parse(localStorage.getItem('tarefasConcluidas')) || [];
+
+// tarefas.forEach((tarefa, index) => {
+//     // Se a tarefa já estiver concluída no localStorage, aplica a classe
+//     if (tarefasConcluidas.includes(index)) {
+//         tarefa.classList.add('concluida');
+//     }
+
+//     tarefa.addEventListener('click', () => {
+//         tarefa.classList.toggle('concluida');
+
+//         const xp = Number(tarefa.querySelector('.xp .numero').textContent);
+//         const indexNaLista = tarefasConcluidas.indexOf(index);
+
+//         if (tarefa.classList.contains('concluida')) {
+//             xpSpan.textContent = Number(xpSpan.textContent) + xp;
+
+//             // Adiciona o índice à lista se ainda não estiver
+//             if (indexNaLista === -1) {
+//                 tarefasConcluidas.push(index);
+//             }
+//         } else {
+//             xpSpan.textContent = Number(xpSpan.textContent) - xp;
+
+//             // Remove o índice da lista
+//             if (indexNaLista !== -1) {
+//                 tarefasConcluidas.splice(indexNaLista, 1);
+//             }
+//         }
+
+//         localStorage.setItem('xp', xpSpan.textContent);
+//         localStorage.setItem('tarefasConcluidas', JSON.stringify(tarefasConcluidas));
+//     });
+// });
+
+
+
+// }
 
 // Chama a função para adicionar as tarefas
-adicionarTarefas();
+// adicionarTarefas();
 
