@@ -1,9 +1,4 @@
 // Verificar se usuário já está logado para mostrar formulário login
-const nomeLocalStorage = localStorage.getItem('nome');
-const xpLocalStorage = localStorage.getItem('xp');
-
-const popupLogin = document.querySelector('#popup_login');
-
 document.addEventListener('DOMContentLoaded', function() {
     if (!nomeLocalStorage && !xpLocalStorage) {
         abrirFecharPopup();
@@ -12,26 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         atualizarSite();
     }
 });
-
-const btnFecharPopup = document.querySelector('.icon_fechar_popup');
-btnFecharPopup.addEventListener('click', () => {
-    abrirFecharPopup();
-})
-
-function abrirFecharPopup() {
-    popupLogin.classList.toggle('none');
-}
-
-
-// Atualizar dados de nome e número de xp
-const nomeSpan = document.getElementById('nomeUsuario');
-const xpSpan = document.querySelector('#xp .numero');
-
-function atualizarSite() {
-    nomeSpan.textContent = nomeLocalStorage;
-    xpSpan.textContent = xpLocalStorage;
-}
-
 
 
 // Formulário
@@ -141,57 +116,57 @@ function criarTarefa(tarefa) {
         tarefasContainer.appendChild(tarefaElemento); // Adiciona na div 'tarefas'
     });
 
-    const tarefas = document.querySelectorAll('.tarefa');
-    tarefas.forEach(tarefa => {
-        tarefa.addEventListener('click', () => {
-            tarefa.classList.toggle('concluida');
-            const xp = tarefa.querySelector('.xp .numero').textContent;
-            if(tarefa.classList.contains('concluida')) {
-                xpSpan.textContent = Number(xpSpan.textContent) + Number(xp);
-            } else {
-                xpSpan.textContent = Number(xpSpan.textContent) - Number(xp);
+    // const tarefas = document.querySelectorAll('.tarefa');
+    // tarefas.forEach(tarefa => {
+    //     tarefa.addEventListener('click', () => {
+    //         tarefa.classList.toggle('concluida');
+    //         const xp = tarefa.querySelector('.xp .numero').textContent;
+    //         if(tarefa.classList.contains('concluida')) {
+    //             xpSpan.textContent = Number(xpSpan.textContent) + Number(xp);
+    //         } else {
+    //             xpSpan.textContent = Number(xpSpan.textContent) - Number(xp);
+    //         }
+    //         localStorage.setItem('xp', xpSpan.textContent);
+    //     })
+    // })
+
+const tarefas = document.querySelectorAll('.tarefa');
+
+// Recupera tarefas concluídas do localStorage ou inicia como array vazio
+let tarefasConcluidas = JSON.parse(localStorage.getItem('tarefasConcluidas')) || [];
+
+tarefas.forEach((tarefa, index) => {
+    // Se a tarefa já estiver concluída no localStorage, aplica a classe
+    if (tarefasConcluidas.includes(index)) {
+        tarefa.classList.add('concluida');
+    }
+
+    tarefa.addEventListener('click', () => {
+        tarefa.classList.toggle('concluida');
+
+        const xp = Number(tarefa.querySelector('.xp .numero').textContent);
+        const indexNaLista = tarefasConcluidas.indexOf(index);
+
+        if (tarefa.classList.contains('concluida')) {
+            xpSpan.textContent = Number(xpSpan.textContent) + xp;
+
+            // Adiciona o índice à lista se ainda não estiver
+            if (indexNaLista === -1) {
+                tarefasConcluidas.push(index);
             }
-            localStorage.setItem('xp', xpSpan.textContent);
-        })
-    })
+        } else {
+            xpSpan.textContent = Number(xpSpan.textContent) - xp;
 
-// const tarefas = document.querySelectorAll('.tarefa');
+            // Remove o índice da lista
+            if (indexNaLista !== -1) {
+                tarefasConcluidas.splice(indexNaLista, 1);
+            }
+        }
 
-// // Recupera tarefas concluídas do localStorage ou inicia como array vazio
-// let tarefasConcluidas = JSON.parse(localStorage.getItem('tarefasConcluidas')) || [];
-
-// tarefas.forEach((tarefa, index) => {
-//     // Se a tarefa já estiver concluída no localStorage, aplica a classe
-//     if (tarefasConcluidas.includes(index)) {
-//         tarefa.classList.add('concluida');
-//     }
-
-//     tarefa.addEventListener('click', () => {
-//         tarefa.classList.toggle('concluida');
-
-//         const xp = Number(tarefa.querySelector('.xp .numero').textContent);
-//         const indexNaLista = tarefasConcluidas.indexOf(index);
-
-//         if (tarefa.classList.contains('concluida')) {
-//             xpSpan.textContent = Number(xpSpan.textContent) + xp;
-
-//             // Adiciona o índice à lista se ainda não estiver
-//             if (indexNaLista === -1) {
-//                 tarefasConcluidas.push(index);
-//             }
-//         } else {
-//             xpSpan.textContent = Number(xpSpan.textContent) - xp;
-
-//             // Remove o índice da lista
-//             if (indexNaLista !== -1) {
-//                 tarefasConcluidas.splice(indexNaLista, 1);
-//             }
-//         }
-
-//         localStorage.setItem('xp', xpSpan.textContent);
-//         localStorage.setItem('tarefasConcluidas', JSON.stringify(tarefasConcluidas));
-//     });
-// });
+        localStorage.setItem('xp', xpSpan.textContent);
+        localStorage.setItem('tarefasConcluidas', JSON.stringify(tarefasConcluidas));
+    });
+});
 
 
 

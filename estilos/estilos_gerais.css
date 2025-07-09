@@ -111,7 +111,7 @@ footer a {
     left: 0;
     top: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100vw;
     height: 100vh;
@@ -129,6 +129,7 @@ footer a {
     }
 
     .popup .mensagem {
+        width: 100%;
         border-radius: 10px;
         background-color: white;
         z-index: 1;
@@ -137,10 +138,12 @@ footer a {
         padding: 1.5rem 2rem;
         display: flex;
         flex-direction: column;
+        padding-bottom: 6rem;
     }
 
     .popup .mensagem h3 {
         margin: 0 0 1rem 0;
+        text-align: center;
     }
 
         .popup .mensagem button {
@@ -167,5 +170,14 @@ footer a {
 @media (min-width: 1025px) {
     main {
         padding: 1rem 25%;
+    }
+
+    .popup {
+        align-items: center;
+    }
+
+    .popup .mensagem {
+        width: auto;
+        padding: 1.5rem 2rem;
     }
 }
