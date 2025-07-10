@@ -1,5 +1,4 @@
 let inputSelecionado = false;
-const nomeArvores = localStorage.getItem('arvores') || [];
 const main = document.querySelector('main');
 
 const opcoes = document.querySelectorAll('.opcao-arvore');
@@ -19,6 +18,11 @@ const opcoes = document.querySelectorAll('.opcao-arvore');
     });
 });
 
+
+if (arvores) {
+	arvores.forEach(arvore => { criarArvore(arvore) });
+} 
+
 const botaoAdicionar = document.querySelector('button[type="submit"]');
 botaoAdicionar.addEventListener('click', event => {
 	event.preventDefault();
@@ -27,9 +31,8 @@ botaoAdicionar.addEventListener('click', event => {
 	else {
 		criarArvore(inputSelecionado);
 		abrirFecharPopup();
-		numeroArvores++;
-		localStorage.setItem('numeroArvores', numeroArvores);
-		nomeArvores.push(inputSelecionado);
+		arvores.push(inputSelecionado);
+		localStorage.setItem('arvores', JSON.stringify(arvores));
 	}
 })
 

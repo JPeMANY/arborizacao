@@ -1,7 +1,7 @@
 const nomeLocalStorage = localStorage.getItem('nome');
 const xpLocalStorage = Number(localStorage.getItem('xp')) || 0;
 
-let numeroArvores = Number(localStorage.getItem('numeroArvores')) || 0;
+const arvores = JSON.parse(localStorage.getItem('arvores')) || [];
 
 // Verificar se usuário já está logado para mostrar formulário login
 document.addEventListener('DOMContentLoaded', function() {

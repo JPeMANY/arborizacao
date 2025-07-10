@@ -1,6 +1,9 @@
 const valorPropriedade = 300000;
 const iptu = 3000;
 
+const numeroArvores = JSON.parse(localStorage.getItem('arvores')).length;
+console.log(numeroArvores)
+
 const descontoPorArvore = 75;
 const iptuComDesconto = iptu - (numeroArvores * descontoPorArvore);
 
