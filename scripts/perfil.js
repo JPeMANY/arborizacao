@@ -14,7 +14,7 @@ const iptu_html = document.querySelector('#iptu');
 const arvores_plantadas_html = document.querySelector('#arvores_plantadas');
 const iptu_desconto_html = document.querySelector('#iptu_desconto');
 
-endereco_html.textContent = localStorage.getItem('endereco');
+endereco_html.textContent = localStorage.getItem('endereco') + ' - ' + localStorage.getItem('cidade');
 valor_propriedade_html.textContent = valorPropriedade;
 iptu_html.textContent = iptu;
 arvores_plantadas_html.textContent = numeroArvores;
