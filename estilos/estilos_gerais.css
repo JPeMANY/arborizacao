@@ -75,6 +75,10 @@ i {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* Barra inferior */
 footer {
