@@ -1,14 +1,3 @@
-// Verificar se usuário já está logado para mostrar formulário login
-document.addEventListener('DOMContentLoaded', function() {
-    if (!nomeLocalStorage && !xpLocalStorage) {
-        abrirFecharPopup();
-    } else {
-        console.log('atualizar')
-        atualizarSite();
-    }
-});
-
-
 // Formulário
 document.getElementById('popup_login').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita o envio do formulário

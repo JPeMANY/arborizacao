@@ -1,5 +1,4 @@
 const ranking = document.querySelector('.ranking');
-const xpLocalStorage = Number(localStorage.getItem('xp')) || 0; // XP do usuário (como número)
 
 // Lista original dos participantes (exceto "Você", que será adicionado abaixo com xpLocalStorage)
 const participantes = [

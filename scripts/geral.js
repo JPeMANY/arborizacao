@@ -1,5 +1,16 @@
 const nomeLocalStorage = localStorage.getItem('nome');
-const xpLocalStorage = localStorage.getItem('xp');
+const xpLocalStorage = Number(localStorage.getItem('xp')) || 0;
+
+// Verificar se usuário já está logado para mostrar formulário login
+document.addEventListener('DOMContentLoaded', function() {
+    if (!nomeLocalStorage && !xpLocalStorage) {
+        abrirFecharPopup();
+    } else {
+        console.log('atualizar')
+        atualizarSite();
+    }
+});
+
 
 // Atualizar dados de nome e número de xp
 const nomeSpan = document.getElementById('nomeUsuario');

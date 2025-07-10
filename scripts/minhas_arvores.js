@@ -5,8 +5,9 @@ const opcoes = document.querySelectorAll('.opcao-arvore');
 	opcao.addEventListener('click', () => {
     	opcoes.forEach(o => o.classList.remove('selecionado'));
     	opcao.classList.add('selecionado');
-    	opcao.querySelector('input[type="radio"]').checked = true;
-		inputSelecionado = true;
+    	const selecionado = opcao.querySelector('input[type="radio"]');
+		selecionado.checked = true;
+		inputSelecionado = selecionado.value;
 
     //   const ArrayArvores = localStorage.getItem('arvores') || [] ;
     //   ArrayArvores.push(opcao.querySelector('span').textContent);
@@ -17,9 +18,11 @@ const opcoes = document.querySelectorAll('.opcao-arvore');
 });
 
 const botaoAdicionar = document.querySelector('button[type="submit"]');
-botaoAdicionar.addEventListener('click', ()=> {
+botaoAdicionar.addEventListener('click', event => {
+	event.preventDefault();
+
 	if(!inputSelecionado) alert('Selecione uma árvore');
 	else {
-		
+		console.log(inputSelecionado)
 	}
 })
