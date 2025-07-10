@@ -1,9 +1,8 @@
 const valorPropriedade = 300000;
 const iptu = 3000;
 
-const arvoresPlantadas = 0 | Number(localStorage.getItem('arvoresPlantadas')); 
 const descontoPorArvore = 75;
-const iptuComDesconto = iptu - (arvoresPlantadas * descontoPorArvore);
+const iptuComDesconto = iptu - (numeroArvores * descontoPorArvore);
 
 // Atualizar dados
 const endereco_html = document.querySelector('#endereco');
@@ -15,5 +14,5 @@ const iptu_desconto_html = document.querySelector('#iptu_desconto');
 endereco_html.textContent = localStorage.getItem('endereco');
 valor_propriedade_html.textContent = valorPropriedade;
 iptu_html.textContent = iptu;
-arvores_plantadas_html.textContent = arvoresPlantadas;
+arvores_plantadas_html.textContent = numeroArvores;
 iptu_desconto_html.textContent = iptuComDesconto;

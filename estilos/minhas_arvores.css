@@ -17,7 +17,7 @@ main {
     gap: 0.5rem;
 }
 
-.arvore img {
+.caixa img {
     height: auto;
     width: auto;
     max-width: 100%;
@@ -33,6 +33,7 @@ main {
     border: 2px dashed #739dcb;
     cursor: pointer;
     text-align: center;
+    order: 1;
 }
 
 .adicionar_arvore:hover {
