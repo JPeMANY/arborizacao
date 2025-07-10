@@ -1,8 +1,8 @@
 const valorPropriedade = 300000;
 const iptu = 3000;
 
-const numeroArvores = JSON.parse(localStorage.getItem('arvores')).length;
-console.log(numeroArvores)
+const arvoreLocalStorage = JSON.parse(localStorage.getItem('arvores') || '[]');
+const numeroArvores = arvoreLocalStorage.length;
 
 const descontoPorArvore = 75;
 const iptuComDesconto = iptu - (numeroArvores * descontoPorArvore);
@@ -15,7 +15,7 @@ const arvores_plantadas_html = document.querySelector('#arvores_plantadas');
 const iptu_desconto_html = document.querySelector('#iptu_desconto');
 
 endereco_html.textContent = localStorage.getItem('endereco') + ' - ' + localStorage.getItem('cidade');
-valor_propriedade_html.textContent = valorPropriedade;
-iptu_html.textContent = iptu;
+valor_propriedade_html.textContent = 'R$' + valorPropriedade + ',00';
+iptu_html.textContent = 'R$' + iptu;
 arvores_plantadas_html.textContent = numeroArvores;
-iptu_desconto_html.textContent = iptuComDesconto;
+iptu_desconto_html.textContent = 'R$' + iptuComDesconto + ',00';
