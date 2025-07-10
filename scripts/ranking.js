@@ -19,7 +19,7 @@ const participantes = [
 ];
 
 // Adiciona o usuário com o XP do localStorage
-participantes.push({ icon: 13, nome: "Você", xp: xpLocalStorage });
+participantes.push({ icon: 13, nome: nomeLocalStorage, xp: xpLocalStorage, usuario: true });
 
 // Ordena os participantes do maior para o menor XP
 participantes.sort((a, b) => b.xp - a.xp);
@@ -28,6 +28,7 @@ participantes.sort((a, b) => b.xp - a.xp);
 participantes.forEach((p, index) => {
     const div = document.createElement('div');
     div.classList.add('participante');
+    if (p.usuario) div.classList.add('usuario');
 
     const spanPosicao = document.createElement('span');
     spanPosicao.classList.add('posicao');

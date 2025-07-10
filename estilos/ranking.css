@@ -40,3 +40,8 @@ main {
         .ranking .participante .xp {
             margin-left: auto;
         }
+
+.usuario {
+    border: 2px solid var(--verde) !important;
+    border-radius: 5px;
+}
