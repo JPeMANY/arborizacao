@@ -145,7 +145,6 @@ footer a {
         padding: 1.5rem 2rem 4rem 2rem;
         display: flex;
         flex-direction: column;
-        margin-bottom: 3rem;
         z-index: 2;
     }
 
