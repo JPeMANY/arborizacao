@@ -121,6 +121,7 @@ footer a {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    z-index: 1;
 }
 
     .popup::before {
@@ -145,6 +146,7 @@ footer a {
         display: flex;
         flex-direction: column;
         margin-bottom: 3rem;
+        z-index: 2;
     }
 
     .popup .mensagem h3 {
