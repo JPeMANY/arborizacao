@@ -51,6 +51,16 @@ h2 {
     gap: 1rem;
 }
 
+.acessoRapido a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.acessoRapido i {
+    font-size: 1.5rem;
+}
+
 .tarefas {
     display: flex;
     flex-direction: column;

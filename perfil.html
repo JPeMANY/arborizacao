@@ -6,6 +6,7 @@
 
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" type="text/css" href="estilos/estilos_gerais.css">
+    <link rel="stylesheet" type="text/css" href="estilos/perfil.css">
 
     <title>Perfil</title>
 </head>
@@ -19,12 +20,19 @@
     </header>
 
     <main>
-        <h2>Minha casa</h2>
+        <h2><i class="fi fi-rr-home"></i>Minha casa</h2>
         <h3 id="endereco"></h3>
-        <span>Valor da propriedade: <span id="valor_propriedade"></span></span>
-        <span>Valor do IPTU: <span id="iptu"></span></span>
-        <span>Número de árvores plantadas: <span id="arvores_plantadas"></span></span>
-        <span>Valor do IPTU (com desconto): <span id="iptu_desconto"></span></span>
+        <hr>
+        <span><i class="fi fi-rr-usd-circle"></i>Valor da propriedade: <span id="valor_propriedade"></span></span>
+
+        <div class="bloco">
+            <span>Valor do IPTU: <span id="iptu"></span></span>
+            <span>Nº de árvores plantadas: <span id="arvores_plantadas"></span></span>
+            <span>IPTU (com desconto): <span id="iptu_desconto"></span></span>
+        </div>
+
+        <button type="button" id="btnResetar">Resetar aplicativo
+        </button>
     </main>
 
     <footer>
