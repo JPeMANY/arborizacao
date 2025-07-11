@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!nomeLocalStorage && !xpLocalStorage) {
         abrirFecharPopup();
     } else {
-        console.log('atualizar')
         atualizarSite();
     }
 });

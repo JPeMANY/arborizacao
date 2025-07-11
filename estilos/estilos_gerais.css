@@ -183,7 +183,11 @@ footer a {
     }
 
     .popup .mensagem {
-        width: auto;
-        padding: 1.5rem 2rem;
+        width: 400px;
+        padding: 3rem 2rem;
     }
+
+        .popup .mensagem button {
+            margin-top: 3rem;
+        }
 }

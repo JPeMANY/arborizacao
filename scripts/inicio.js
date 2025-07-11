@@ -15,6 +15,7 @@ document.getElementById('popup_login').addEventListener('submit', function(event
     localStorage.setItem('endereco', endereco);
 
     abrirFecharPopup();
+    location.reload()
 
     } else {
     alert('Por favor, preencha todos os campos.');
