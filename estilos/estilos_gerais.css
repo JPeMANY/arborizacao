@@ -142,7 +142,7 @@ footer a {
         z-index: 1;
         position: relative;
         box-sizing: border-box;
-        padding: 1.5rem 2rem 4rem 2rem;
+        padding: 1.5rem 2rem 6rem 2rem;
         display: flex;
         flex-direction: column;
         z-index: 2;
